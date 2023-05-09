@@ -50,10 +50,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-git clone https://github.com/mrankitsinghal/config ~/.config
+cp -r ~/mac-configs/config/* ~/.config/.
 ln -s ~/.config/kitty/kitty-themes/themes/kanagawa.conf ~/.config/kitty/theme.conf
 # git clone https://github.com/mrankitsinghal/oh-my-zsh ~/.oh-my-zsh
-git clone https://github.com/mrankitsinghal/env.sh ~/env.sh
-git clone https://github.com/mrankitsinghal/zshrc ~/.zshrc
+cp ~/mac-configs/env.sh ~/env.sh
+cp ~/mac-configs/zshrc ~/.zshrc
 
+# Install the k8s cluster in docker
 brew install kind
