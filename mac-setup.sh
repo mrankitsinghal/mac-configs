@@ -1,5 +1,8 @@
-!#/bin/bash
+#!/bin/bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+brew install rustup
 
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ${HOME}/.zprofile
 
@@ -44,6 +47,14 @@ brew install --cask sublime-text
 brew install --cask google-drive
 brew install --cask discord
 brew install --cask windscribe
+brew install --cask orbstack
+brew install gcc
+brew install wrk
+brew install telnet
+brew install git-flow
+brew install --cask microsoft-outlook
+brew install --cask dbeaver-community
+
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -56,5 +67,9 @@ ln -s ~/.config/kitty/kitty-themes/themes/kanagawa.conf ~/.config/kitty/theme.co
 cp ~/mac-configs/env.sh ~/env.sh
 cp ~/mac-configs/zshrc ~/.zshrc
 
+
 # Install the k8s cluster in docker
 brew install kind
+brew install kubectl
+
+rm -r ~/mac-configs
